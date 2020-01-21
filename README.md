@@ -14,6 +14,8 @@ Script that automatically loads image archives ( *.tar or others ) from specifie
 <h2>podman_clean.sh</h2>
 
 <code>
- git clone
- chmod +x podman_load.sh
+ git clone<br>
+ chmod +x podman_load.sh<br>
+ chmod +x podman_monitor.sh<br>
+ chmod +x podman_clean.sh<br>
 </code>
