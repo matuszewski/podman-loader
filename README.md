@@ -6,3 +6,14 @@ Script that automatically loads image archives ( *.tar or others ) from specifie
 <p>podman, obviously</p>
 <p>python 2.7 +</p>
 
+
+
+
+<h2>podman_load.sh</h2>
+<h2>podman_monitor.sh</h2>
+<h2>podman_clean.sh</h2>
+
+<code>
+ git clone
+ chmod +x podman_load.sh
+</code>
