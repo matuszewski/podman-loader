@@ -1,6 +1,5 @@
-###!/usr/bin/env python2.7
-
-#       python2.7 -m compileall .    # kompilacja do .pyc
+# #!/usr/bin/env python2.7
+#       python2.7 -m compileall .    # compilation to .pyc extension
 #       https://stackoverflow.com/questions/21189346/shebang-line-for-python-2-7/21189383
 
 
@@ -13,26 +12,28 @@ directory = "Desktop"       # .         working directory
 extension = ".txt"          # .tar
 
 def main():
-    #command = "podman load --input "
-    command = "echo "
+    #command = "podman load --input "   # default command to run
+    command = "echo "                   # only for testing
     
 
-    # tworzy liste wszystkich plikow w katalogu         # () tuple     [] listy     {} slowniki
+    # creates a list of all files ( also hidden ) in specified directory # () tuple     [] list    {} dictionary
     allfiles = [f for f in listdir(directory) if isfile(join(directory, f))]
     
+    # creates an empty list to which all found *.tar archives will append
     archives = []
 
     
-    # WSZYSTKIE PLIKI, TEŻ UKRYTE
+    # Display all files ( also hidden files )
     #for filename in onlyfiles:
     #    print(filename)
 
     print("--------------------------------------------------------------------------------------------")
     print("PODMAN LOADER:")
     print("all files: " + str(len(allfiles)))
-    # PLIKI Z ROZSZERZENIEM .tar
+    
+    # display files with *.tar extension
     for filename in allfiles:
-        if(filename.find(extension, -4) != -1): # czy ostatnie 4 litery to dane rozszerzenie (tutaj .tar )
+        if(filename.find(extension, -4) != -1): # checks if the last 4 characters are the extension ( .XXX )
             print(filename)
             archives.append(filename)
 
