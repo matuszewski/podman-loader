@@ -1,1 +1,4 @@
-watch -n 1 -t "podman image ls --all && echo '----------------------------------------------------------------------' && podman container ls --all "
+#!/bin/bash
+watch -n 1 -t "podman image ls --all &&
+echo '----------------------------------------------------------------------' &&
+podman container ls --all "
