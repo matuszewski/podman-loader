@@ -1,3 +1,4 @@
+#!/bin/bash
 podman rm --all
 podman pod rm --all
 podman rm --all
