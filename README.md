@@ -3,8 +3,11 @@ A simple but applicative python script that automatically loads container images
 It uses all sorts of file extensions.
 
 <h5>Usage</h5>
-<code>$ cd directory_with_tar_images/</code><br>
+<code>$ cd directory_with_tar_images</code>
 <code>$ python podman_loader.py</code>
+<p>To make the script executable simply: <br><code>$ chmod 777 podman_loader.py</code><br>
+<code>$ ./podman_loader.py</code></p>
+
 <h5>Dependencies</h5>
 <li>podman</li>
 <li>python 2.7+</li>
