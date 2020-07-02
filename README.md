@@ -1,5 +1,7 @@
 # podman-loader
-Script that automatically loads image archives ( *.tar or others ) from specified directories to podman as a ready-to-use images
+A simple but applicative python script that automatically loads container images from specified directory to podman local image repository.
+It uses all sorts of file extensions.
+
 <h5>Usage</h5>
 <code>$ cd directory_with_tar_images/</code><br>
 <code>$ python podman_loader.py</code>
