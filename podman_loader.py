@@ -1,34 +1,37 @@
 # #!/usr/bin/env python2.7
 #       python2.7 -m compileall .    # compilation to .pyc extension
-#       https://stackoverflow.com/questions/21189346/shebang-line-for-python-2-7/21189383
-
 
 import subprocess
 from os import listdir
 from os.path import isfile, join
 import os
 
-directory = "Desktop"       # .         working directory
-extension = ".txt"          # .tar
+directory = "."             # .     working directory
+extension = ".tar"          # .tar
 
 def main():
     #command = "podman load --input "   # default command to run
-    command = "echo "                   # only for testing
+    command = "echo "
     
 
-    # creates a list of all files ( also hidden ) in specified directory # () tuple     [] list    {} dictionary
+    # creates a list of all files (also hidden) in specified directory
     allfiles = [f for f in listdir(directory) if isfile(join(directory, f))]
     
     # creates an empty list to which all found *.tar archives will append
     archives = []
 
     
-    # Display all files ( also hidden files )
+    # Display all files (also hidden)
     #for filename in onlyfiles:
     #    print(filename)
 
-    print("--------------------------------------------------------------------------------------------")
+    print('-'*30)
     print("PODMAN LOADER:")
+    print("[>] workdir:\t" + directory)
+    print("[>] extension:\t" + extension)
+    print('-'*30)
+
+    
     print("all files: " + str(len(allfiles)))
     
     # display files with *.tar extension
@@ -42,10 +45,13 @@ def main():
             #process = subprocess.Popen(command + "ea", stdout=subprocess.PIPE)
             #output, error = process.communicate()
 
-    print("running -------------")
-    for archive in archives:
-        os.system("docker " + archive)
+    print("[>] running")
     
+    for archive in archives:
+        os.system("podman load --input " + archive)
+    
+    print("[>] done")
+
     pass
 
 if __name__ == "__main__":
