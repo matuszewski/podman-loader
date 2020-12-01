@@ -6,8 +6,9 @@ It uses all sorts of file extensions.
 <code>$ cd directory_with_tar_images</code><br>
 <code>$ python podman_loader.py</code>
 <br>
-<p>To make the script executable simply: <br>
-<code>$ chmod 777 podman_loader.py</code><br>
+<p>Make the script executable<br>
+<code>$ chmod +x podman_loader.py</code><br>
+<p>Run</p>
 <code>$ ./podman_loader.py</code></p>
 
 <h5>Dependencies</h5>
