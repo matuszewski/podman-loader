@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# >>> python2.7 -m compileall .    # compilation to .pyc extension
+# python2.7 -m compileall .    # compilation to .pyc extension
 
 import subprocess
 from os import listdir
@@ -39,11 +39,10 @@ def main():
         if(filename.find(extension, -4) != -1): # checks if the last 4 characters are the extension ( .XXX )
             print(filename)
             archives.append(filename)
-
-            #subprocess.run(["echo", filename])
-
-            #process = subprocess.Popen(command + "ea", stdout=subprocess.PIPE)
-            #output, error = process.communicate()
+            # TODO, multitasking
+            # subprocess.run(["echo", filename])
+            # process = subprocess.Popen(command + "ea", stdout=subprocess.PIPE)
+            # output, error = process.communicate()
 
     print("[>] " + extension + " files: " + str(len(archives)))
 
