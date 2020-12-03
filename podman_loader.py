@@ -6,8 +6,9 @@ from os import listdir
 from os.path import isfile, join
 import os
 
-directory = "."             # .     working directory
-extension = ".tar"          # .tar
+# TODO podman/docker
+directory = "."             # .     working directory in which you have to be to run the script
+extension = ".tar"          # extension for image files
 
 def main():
     # command = "podman load --input "   # default command to run
